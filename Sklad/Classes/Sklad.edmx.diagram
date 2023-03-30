@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0e77862930ca4e4db5652410526544f8" Name="Diagram1" ZoomLevel="83">
+        <EntityTypeShape EntityType="SkladModel.Application" Width="1.5" PointX="3" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SkladModel.Manufacturer" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SkladModel.Medicament" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="SkladModel.Phaemacy" Width="1.5" PointX="0.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SkladModel.Purchase" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SkladModel.Type" Width="1.5" PointX="0.625" PointY="5.375" IsExpanded="true" />
+        <AssociationConnector Association="SkladModel.FK_Application_Phaemacy" ManuallyRouted="false" />
+        <AssociationConnector Association="SkladModel.FK_Purchase_Application" ManuallyRouted="false" />
+        <AssociationConnector Association="SkladModel.FK_Medicament_Manufacturer" ManuallyRouted="false" />
+        <AssociationConnector Association="SkladModel.FK_Medicament_Type" ManuallyRouted="false" />
+        <AssociationConnector Association="SkladModel.FK_Purchase_Medicament" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="SkladModel.sysdiagrams" Width="1.5" PointX="10.5" PointY="1.25" />
+        <EntityTypeShape EntityType="SkladModel.Basket" Width="1.5" PointX="5.25" PointY="4.5" />
+        <EntityTypeShape EntityType="SkladModel.Order" Width="1.5" PointX="7.5" PointY="4.625" />
+        <AssociationConnector Association="SkladModel.FK_Order_Basket" />
+        <AssociationConnector Association="SkladModel.FK_Order_Medicament" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

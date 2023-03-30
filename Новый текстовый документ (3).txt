@@ -1,0 +1,60 @@
+ private static SkladEntities _Context;
+
+public static SkladEntities GetContext()
+        {
+            if (_Context == null)
+                _Context = new SkladEntities();
+            return _Context;
+        }
+
+<Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.3*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="7*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="10*"/>
+        </Grid.ColumnDefinitions>
+        <Image Source="/Photo/Pharmacy1.png" Margin="0,-8,0,-8" Stretch="Fill" Grid.ColumnSpan="3" Grid.RowSpan="3"/>
+        <StackPanel Grid.ColumnSpan="1">
+            <Button x:Name="Back" Click="Back_Click" Width="25" Height="25">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Photo/iconkaback.png"/>
+                </Button.Background>
+            </Button>
+        </StackPanel>
+        <StackPanel Grid.ColumnSpan="2">
+            <TextBlock Text="Корзина заказов"
+                      Height="30"
+                      Width="150"
+                      Margin="5"/>
+        </StackPanel>
+        <DataGrid Name="DGridOrder"
+                  AutoGenerateColumns="False" Grid.Row="1" Grid.ColumnSpan="3" >
+            <DataGrid.Columns>
+                <DataGridTextColumn
+                        Header="Название" Width="*"
+                        Binding="{Binding Medicament.NazvanieMedicament}"/>
+                <DataGridTextColumn
+                        Header="Цена" Width="*"
+                        Binding="{Binding Medicament.Price}"/>
+                <DataGridTextColumn
+                        Header="Тип" Width="*"
+                        Binding="{Binding Kolvo}"/>
+                <DataGridTemplateColumn Width="auto">
+                </DataGridTemplateColumn>
+            
+            </DataGrid.Columns>
+        </DataGrid>
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center" Grid.Column="0" Grid.Row="0">
+            <!--<Button x:Name="Back" Click="Back_Click" Width="25" Height="25">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Photo/iconkaback.png"/>
+                </Button.Background>
+            </Button>-->
+        </StackPanel>
+    </Grid>
+</Page>
